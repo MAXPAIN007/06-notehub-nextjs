@@ -1,8 +1,8 @@
 export interface Note {
-  id: number;
+  id: string;
   title: string;
   content: string;
-  tag: NoteStatus;
+  tag: Tag;
   createdAt: string;
   updatedAt: string;
 }
@@ -10,7 +10,7 @@ export interface Note {
 export interface NewNoteData {
   title: string;
   content: string;
-  tag: NoteStatus;
+  tag: Tag;
 }
 
-export type NoteStatus = "Todo" | "Work" | "Personal" | "Meeting" | "Shopping";
+export type Tag = 'Todo' | 'Work' | 'Personal' | 'Meeting' | 'Shopping';
